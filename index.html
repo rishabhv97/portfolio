@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ether | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Hi, I'm Ether.<br><span class="gradient-text">I build digital experiences.</span></h1>
+      <p class="hero-subtitle">I'm a developer focusing on web technologies, problem-solving, and bringing startup ideas to life through clean code and intuitive design.</p>
+    </header>
+
+    <section class="deck-section">
+      
+      <div class="deck-container" id="cardDeck">
+        
+        <div class="deck-card theme-orange pos-1" onclick="handleCardClick(0)">
+          <div class="card-graphic"></div>
+          <h3>Working Knowledge</h3>
+          <p>Frameworks, principles, and models developed to immediately apply to design practice and complex logic problems.</p>
+        </div>
+
+        <div class="deck-card theme-beige pos-2" onclick="handleCardClick(1)">
+          <div class="card-graphic"></div>
+          <h3>Practical Demonstration</h3>
+          <p>Detailed walkthroughs of building real-world projects like real estate platforms, identifying opportunities, and improving through refinement.</p>
+        </div>
+
+        <div class="deck-card theme-blue pos-3" onclick="handleCardClick(2)">
+          <div class="card-graphic"></div>
+          <h3>Collaborating with AI</h3>
+          <p>Lessons on practical, specific methods of working with intelligent tools to accelerate development workflows and get exacting results.</p>
+        </div>
+
+        <div class="deck-card theme-green pos-4" onclick="handleCardClick(3)">
+          <div class="card-graphic"></div>
+          <h3>Means & Methods</h3>
+          <p>Systems, workflows, and techniques for efficient product development—from Git version control to final deployment.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <main class="bento-grid">
+      <div class="bento-item col-span-2 row-span-2" style="background: linear-gradient(135deg, rgba(255, 42, 95, 0.1), rgba(0, 0, 0, 0));">
+        <div>
+          <span class="card-tag">Hackathon Project</span>
+          <h2 class="card-title">CareLingo</h2>
+          <p class="card-desc">A multilingual patient intake portal designed to bridge communication gaps in healthcare settings.</p>
+          <div class="tech-stack">
+            <span class="tech-pill">HTML</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-item" style="background: linear-gradient(135deg, #43e97b, #38f9d7); color: #000;">
+        <div>
+          <span class="card-tag" style="color: rgba(0,0,0,0.7);">The Toolkit</span>
+          <h2 class="card-title">Frontend Dev</h2>
+          <p class="card-desc" style="color: rgba(0,0,0,0.7);">Translating designs into interactive UI.</p>
+          <div style="font-size: 2rem; margin-top: 15px;">🌐 💻 📱</div>
+        </div>
+      </div>
+
+      <div class="bento-item">
+        <div>
+          <span class="card-tag">Continuous Learning</span>
+          <h2 class="card-title">DSA & Logic</h2>
+          <p class="card-desc">Sharpening problem-solving skills through Data Structures and Algorithms.</p>
+        </div>
+      </div>
+
+      <div class="bento-item col-span-4" style="text-align: center; background: linear-gradient(45deg, #18181b, #27272a);">
+        <div>
+          <h2 class="card-title">Imagine Cup 2026</h2>
+          <p class="card-desc">Pushing the boundaries of innovation and prototyping for global competition.</p>
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

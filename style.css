@@ -1,0 +1,41 @@
+/* --- CLEANED DECK SECTION (GSAP WILL HANDLE ANIMATIONS) --- */
+.deck-section {
+  text-align: center;
+  padding: 40px 0 80px;
+}
+
+.deck-container {
+  position: relative;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.deck-card {
+  position: absolute;
+  width: 320px;
+  height: 480px;
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transform-origin: bottom center;
+  color: #111;
+  /* Removed CSS transitions, GSAP does the heavy lifting now */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  /* Ensure they start hidden so GSAP can place them before they appear */
+  visibility: hidden; 
+}
+
+.card-graphic { height: 180px; border-radius: 8px; margin-bottom: 24px; opacity: 0.8; background-size: cover; }
+.deck-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; line-height: 1.1; margin-bottom: 16px; }
+.deck-card p { font-size: 0.95rem; color: rgba(0,0,0,0.8); margin: 0; line-height: 1.4; }
+
+/* Themes */
+.theme-orange { background-color: #d85a38; color: #fff; } .theme-orange p { color: rgba(255,255,255,0.9); } .theme-orange .card-graphic { background: repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(255,255,255,0.4) 4px, rgba(255,255,255,0.4) 6px); }
+.theme-beige { background-color: #e9e4d4; } .theme-beige .card-graphic { background: repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px), repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px); }
+.theme-blue { background-color: #498fdc; color: #fff; } .theme-blue p { color: rgba(255,255,255,0.9); } .theme-blue .card-graphic { background: repeating-radial-gradient(circle at 50% 150%, transparent, transparent 10px, rgba(255,255,255,0.3) 10px, rgba(255,255,255,0.3) 12px); }
+.theme-green { background-color: #6edc7b; } .theme-green .card-graphic { background: repeating-linear-gradient(90deg, rgba(0,0,0,0.3) 0px, rgba(0,0,0,0.3) 4px, transparent 4px, transparent 8px); }
