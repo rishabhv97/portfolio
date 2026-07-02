@@ -1,3 +1,38 @@
+/* --- GLOBAL THEME (Cape Town Dam Levels Inspired) --- */
+body {
+  background-color: #0a192f; /* Deep Navy Background */
+  color: #f8fafc;            /* Crisp Off-White Text */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Adding some basic layout constraints for the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Typography styles for header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #94a3b8; /* slightly muted text for subtitle */
+}
+
 /* --- CLEANED DECK SECTION (GSAP WILL HANDLE ANIMATIONS) --- */
 .deck-section {
   text-align: center;
@@ -24,18 +59,92 @@
   flex-direction: column;
   transform-origin: bottom center;
   color: #111;
-  /* Removed CSS transitions, GSAP does the heavy lifting now */
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   /* Ensure they start hidden so GSAP can place them before they appear */
   visibility: hidden; 
+  box-sizing: border-box;
 }
 
-.card-graphic { height: 180px; border-radius: 8px; margin-bottom: 24px; opacity: 0.8; background-size: cover; }
-.deck-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; line-height: 1.1; margin-bottom: 16px; }
-.deck-card p { font-size: 0.95rem; color: rgba(0,0,0,0.8); margin: 0; line-height: 1.4; }
+.card-graphic { 
+  height: 180px; 
+  border-radius: 8px; 
+  margin-bottom: 24px; 
+  opacity: 0.8; 
+  background-size: cover; 
+}
+
+.deck-card h3 { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 1.8rem; 
+  line-height: 1.1; 
+  margin-bottom: 16px; 
+}
+
+.deck-card p { 
+  font-size: 0.95rem; 
+  color: rgba(0,0,0,0.8); 
+  margin: 0; 
+  line-height: 1.4; 
+}
 
 /* Themes */
-.theme-orange { background-color: #d85a38; color: #fff; } .theme-orange p { color: rgba(255,255,255,0.9); } .theme-orange .card-graphic { background: repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(255,255,255,0.4) 4px, rgba(255,255,255,0.4) 6px); }
-.theme-beige { background-color: #e9e4d4; } .theme-beige .card-graphic { background: repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px), repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px); }
-.theme-blue { background-color: #498fdc; color: #fff; } .theme-blue p { color: rgba(255,255,255,0.9); } .theme-blue .card-graphic { background: repeating-radial-gradient(circle at 50% 150%, transparent, transparent 10px, rgba(255,255,255,0.3) 10px, rgba(255,255,255,0.3) 12px); }
-.theme-green { background-color: #6edc7b; } .theme-green .card-graphic { background: repeating-linear-gradient(90deg, rgba(0,0,0,0.3) 0px, rgba(0,0,0,0.3) 4px, transparent 4px, transparent 8px); }
+.theme-orange { background-color: #d85a38; color: #fff; } 
+.theme-orange p { color: rgba(255,255,255,0.9); } 
+.theme-orange .card-graphic { background: repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(255,255,255,0.4) 4px, rgba(255,255,255,0.4) 6px); }
+
+.theme-beige { background-color: #e9e4d4; } 
+.theme-beige .card-graphic { background: repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px), repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px); }
+
+.theme-blue { background-color: #498fdc; color: #fff; } 
+.theme-blue p { color: rgba(255,255,255,0.9); } 
+.theme-blue .card-graphic { background: repeating-radial-gradient(circle at 50% 150%, transparent, transparent 10px, rgba(255,255,255,0.3) 10px, rgba(255,255,255,0.3) 12px); }
+
+.theme-green { background-color: #6edc7b; } 
+.theme-green .card-graphic { background: repeating-linear-gradient(90deg, rgba(0,0,0,0.3) 0px, rgba(0,0,0,0.3) 4px, transparent 4px, transparent 8px); }
+
+/* --- BENTO GRID STYLES (Added basic scaffolding so it looks decent) --- */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.bento-item {
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-span-2 { grid-column: span 2; }
+.col-span-4 { grid-column: span 4; }
+.row-span-2 { grid-row: span 2; }
+
+.card-tag {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.tech-stack {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.tech-pill {
+  background: rgba(255,255,255,0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
