@@ -37,10 +37,11 @@ body {
 }
 
 .nav-brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-family: 'Dancing Script', cursive; /* The new handwritten font */
+  font-size: 2.2rem; /* Made slightly larger for the cursive style */
   font-weight: 700;
   color: #fff;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -455,7 +456,7 @@ body {
 .detail-featured-media {
   width: 100%;
   aspect-ratio: 16 / 9; /* Forces a perfect widescreen ratio so it never shrinks */
-  margin-bottom: 40px 0;
+  margin : 40px 0;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);
