@@ -1,94 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ether | Portfolio</title>
+  <title>Rishabh Verma | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="container">
-    <header>
-      <h1>Hi, I'm Ether.<br><span class="gradient-text">I build digital experiences.</span></h1>
-      <p class="hero-subtitle">I'm a developer focusing on web technologies, problem-solving, and bringing startup ideas to life through clean code and intuitive design.</p>
-    </header>
+  <!-- THIN NAVBAR WITH ICONS -->
+  <nav class="navbar">
+    <div class="nav-brand">Rishabh Verma.</div>
+    <div class="nav-links">
+      <a href="#projects-grid"><i class="fa-solid fa-layer-group"></i> Projects</a>
+      <a href="https://www.linkedin.com/in/rishabh-verma-4b8168350/" target="_blank"><i
+          class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+      <a href="https://github.com/rishabhv97" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://leetcode.com/u/Rishabhv2100/" target="_blank"><i class="fa-solid fa-code"></i> LeetCode</a>
+      <a href="mailto:rishabhv2100@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="assets/resume _ RISHABH VERMA.pdf" download class="btn-download"><i class="fa-solid fa-download"></i>
+        Resume</a>
+    </div>
+  </nav>
 
-    <section class="deck-section">
-      
-      <div class="deck-container" id="cardDeck">
-        
-        <div class="deck-card theme-orange pos-1" onclick="handleCardClick(0)">
-          <div class="card-graphic"></div>
-          <h3>Working Knowledge</h3>
-          <p>Frameworks, principles, and models developed to immediately apply to design practice and complex logic problems.</p>
-        </div>
+  <!-- DRAMATIC HERO WITH PROFILE PIC -->
+  <header class="hero-dramatic">
+    <div class="hero-bg-number">01</div>
+    <div class="container hero-flex">
+      <div class="hero-text-content">
+        <span class="hero-overline">About </span>
+        <!-- <h2 class="hero-title">Rishabh <span class="highlight-italic">Verma</span></h2> -->
+        <p class="hero-bio">
+          Full-Stack Developer focused on backend systems, modern web applications, and AI-driven solutions
+          <br>
+          Curious by nature. I spend my time building products, solving DSA problems, reading about technology and
+          startups, and learning the tools behind modern software.
 
-        <div class="deck-card theme-beige pos-2" onclick="handleCardClick(1)">
-          <div class="card-graphic"></div>
-          <h3>Practical Demonstration</h3>
-          <p>Detailed walkthroughs of building real-world projects like real estate platforms, identifying opportunities, and improving through refinement.</p>
-        </div>
 
-        <div class="deck-card theme-blue pos-3" onclick="handleCardClick(2)">
-          <div class="card-graphic"></div>
-          <h3>Collaborating with AI</h3>
-          <p>Lessons on practical, specific methods of working with intelligent tools to accelerate development workflows and get exacting results.</p>
-        </div>
-
-        <div class="deck-card theme-green pos-4" onclick="handleCardClick(3)">
-          <div class="card-graphic"></div>
-          <h3>Means & Methods</h3>
-          <p>Systems, workflows, and techniques for efficient product development—from Git version control to final deployment.</p>
-        </div>
-
+        </p>
       </div>
+      <div class="hero-image-content">
+        <img src="assets/profile2.png" alt="Rishabh Verma" class="hero-circular-img">
+      </div>
+    </div>
+  </header>
+
+  <div class="separator-line"></div>
+
+  <div class="container">
+
+    <!-- DRAMATIC INTRO -->
+    <section class="intro-dramatic">
+      <div class="intro-overline">
+        <div class="gold-line"></div> Featured Builds
+      </div>
+      <h2 class="intro-title">The Projects <span class="highlight-italic"> Archive</span></h2>
+      <p class="intro-text">
+        These projects represent my journey from learning web development to building production-ready applications.
+        Each one helped me tackle different engineering challenges—from authentication and cloud integrations to
+        role-based systems and scalable dashboards.
+      </p>
     </section>
 
-    <main class="bento-grid">
-      <div class="bento-item col-span-2 row-span-2" style="background: linear-gradient(135deg, rgba(255, 42, 95, 0.1), rgba(0, 0, 0, 0)); border: 1px solid rgba(255,255,255,0.1);">
-        <div>
-          <span class="card-tag">Hackathon Project</span>
-          <h2 class="card-title">CareLingo</h2>
-          <p class="card-desc">A multilingual patient intake portal designed to bridge communication gaps in healthcare settings.</p>
-          <div class="tech-stack">
-            <span class="tech-pill">HTML</span>
-            <span class="tech-pill">CSS</span>
-            <span class="tech-pill">JavaScript</span>
+    <!-- SIMPLE PROJECTS GRID (3 Cards) -->
+    <section class="projects-grid" id="projects-grid">
+
+      <!-- Card 1: Havenly -->
+      <div class="simple-card">
+        <div class="card-top" onclick="document.getElementById('proj-1').scrollIntoView({behavior: 'smooth'})">
+          <img src="assets/havenly-preview.png" alt="Havenly Project" class="card-rect-img">
+          <h3 class="card-title-serif">Havenly</h3>
+          <span class="card-pill">MERN STACK + MAPBOX</span>
+          <p class="card-desc">A full-stack property rental platform inspired by Airbnb featuring secure authentication,
+            interactive maps, cloud image storage, and complete CRUD functionality.</p>
+        </div>
+        <div class="card-bottom">
+          <a href="https://havenly-app.onrender.com/listings" class="stat-link" onclick="event.stopPropagation()">
+            <span class="stat-value">LIVE</span>
+            <span class="stat-label">DEMO</span>
+          </a>
+          <div class="stat-divider"></div>
+          <a href="https://github.com/rishabhv97/Havenly" class="stat-link" onclick="event.stopPropagation()">
+            <span class="stat-value">CODE</span>
+            <span class="stat-label">GITHUB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Kiwi SQFT -->
+      <div class="simple-card">
+        <div class="card-top" onclick="document.getElementById('proj-2').scrollIntoView({behavior: 'smooth'})">
+          <img src="assets/kiwi-preview.png" alt="Kiwi sqft Project" class="card-rect-img">
+          <h3 class="card-title-serif">Kiwi SQFT</h3>
+          <span class="card-pill">REACT + SUPABASE</span>
+          <p class="card-desc">A production-ready real estate platform featuring secure authentication, RBAC, responsive
+            user dashboards, and comprehensive admin panels.</p>
+        </div>
+        <div class="card-bottom">
+          <a href="https://kiwisqfeet.com/" class="stat-link" onclick="event.stopPropagation()">
+            <span class="stat-value">LIVE</span>
+            <span class="stat-label">Link</span>
+          </a>
+          <!-- <div class="stat-divider"></div>
+          <a href="#" class="stat-link" onclick="event.stopPropagation()">
+            <span class="stat-value">CODE</span>
+            <span class="stat-label">GITHUB</span>
+          </a> -->
+        </div>
+      </div>
+
+      <!-- Card 3: Vyom Health -->
+      <div class="simple-card">
+        <div class="card-top" onclick="document.getElementById('proj-3').scrollIntoView({behavior: 'smooth'})">
+          <img src="assets/vyom-shot1.png" alt="Vyom Health Project" class="card-rect-img">
+          <h3 class="card-title-serif">Vyom Health</h3>
+          <span class="card-pill">HEALTH TECH + AI</span>
+          <p class="card-desc">A digital health record platform developed for SIH, featuring QR-based health IDs, AI
+            symptom analysis, and public health analytics dashboards.</p>
+        </div>
+        <div class="card-bottom">
+          <!-- <a href="#" class="stat-link" onclick="event.stopPropagation()">
+            <span class="stat-value">LIVE</span>
+            <span class="stat-label">DEMO</span>
+          </a>
+          <div class="stat-divider"></div> -->
+          <a href="https://github.com/rishabhv97/migrant-health-app" class="stat-link"
+            onclick="event.stopPropagation()">
+            <span class="stat-value">CODE</span>
+            <span class="stat-label">GITHUB</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="separator-line"></div>
+
+  <!-- DETAILED PROJECT DESCRIPTIONS -->
+  <div class="container">
+    <section class="project-details">
+
+      <article id="proj-1" class="detail-block">
+        <div class="detail-header">
+          <span class="detail-number">01.</span>
+          <h2 class="detail-title">Havenly <span class="highlight-italic">Property Rental Platform</span></h2>
+        </div>
+
+        <div class="detail-content">
+          <p>Havenly is a full-stack property rental platform inspired by Airbnb that enables users to discover, list,
+            and review unique places to stay. The application provides a complete booking-style experience with secure
+            authentication, interactive maps, image uploads, and role-based access control.</p>
+          <p>I built Havenly to gain hands-on experience with developing production-ready web applications, focusing on
+            backend architecture, authentication, database design, and third-party API integrations. The project
+            implements full CRUD operations, server-side validation, session-based authentication, cloud image storage,
+            and location-based property visualization while maintaining a responsive and user-friendly interface.</p>
+
+          <div class="detail-featured-media">
+            <video controls autoplay muted loop playsinline poster="assets/havenly-preview.jpg">
+              <source src="assets/havenly-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- <div class="detail-gallery">
+            <img src="assets/heavenly-shot1.png" alt="Havenly Interface 1" class="gallery-img">
+            <img src="assets/heavenly-shot2.png" alt="Havenly Interface 2" class="gallery-img">
+          </div> -->
+
+          <div class="detail-specs">
+            <div class="spec-column">
+              <h4 class="spec-title">Highlights</h4>
+              <ul class="spec-list">
+                <li>Secure authentication and authorization using Passport.js and session management.</li>
+                <li>Property listing management with full CRUD functionality.</li>
+                <li>Cloudinary integration for efficient image uploads and storage.</li>
+                <li>Interactive property locations powered by the Mapbox API.</li>
+                <li>Review and rating system with ownership-based access control.</li>
+              </ul>
+            </div>
+            <div class="spec-column">
+              <h4 class="spec-title">Tech Stack</h4>
+              <p class="spec-text">Node.js • Express.js • MongoDB Atlas • Passport.js • EJS • Bootstrap • Cloudinary •
+                Mapbox API • Joi</p>
+
+              <h4 class="spec-title" style="margin-top: 30px;">Challenges & Learnings</h4>
+              <ul class="spec-list">
+                <li>Integrated multiple third-party services (Cloudinary and Mapbox) into a unified application.</li>
+                <li>Structured the backend using the MVC architecture to keep the codebase modular and maintainable.
+                </li>
+                <li>Improved understanding of RESTful API design, MongoDB relationships, and middleware.</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="bento-item" style="background: linear-gradient(135deg, #43e97b, #38f9d7); color: #000;">
-        <div>
-          <span class="card-tag" style="color: rgba(0,0,0,0.7);">The Toolkit</span>
-          <h2 class="card-title">Frontend Dev</h2>
-          <p class="card-desc" style="color: rgba(0,0,0,0.7);">Translating designs into interactive UI.</p>
-          <div style="font-size: 2rem; margin-top: 15px;">💻 🎨 🚀</div>
+      <div class="separator-line"></div>
+
+      <article id="proj-2" class="detail-block">
+        <div class="detail-header">
+          <span class="detail-number">02.</span>
+          <h2 class="detail-title">Kiwi SQFT <span class="highlight-italic">Property Management & Admin Dashboard</span>
+          </h2>
         </div>
-      </div>
 
-      <div class="bento-item" style="border: 1px solid rgba(255,255,255,0.1);">
-        <div>
-          <span class="card-tag">Continuous Learning</span>
-          <h2 class="card-title">DSA & Logic</h2>
-          <p class="card-desc">Sharpening problem-solving skills through Data Structures and Algorithms.</p>
+        <div class="detail-content">
+          <p>Kiwi SQFT is a production-ready full-stack real estate platform developed for a live client to simplify
+            property discovery, agent interactions, and platform management. The application provides a seamless
+            experience for users to browse properties while offering dedicated dashboards and administrative tools for
+            managing the platform.</p>
+          <p>The project was built with a strong focus on scalability, maintainability, and real-world workflows. It
+            features secure authentication, role-based access control, responsive dashboards, and a comprehensive admin
+            panel for managing users, agents, properties, leads, and engagement data.</p>
+
+          <div class="detail-featured-media">
+            <video controls autoplay muted loop playsinline poster="assets/kiwi-preview.jpg">
+              <source src="assets/kiwi-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- <div class="detail-gallery">
+            <img src="assets/kiwi-shot1.png" alt="Kiwi Dashboard 1" class="gallery-img">
+            <img src="assets/kiwi-shot2.png" alt="Kiwi Dashboard 2" class="gallery-img">
+          </div> -->
+
+          <div class="detail-specs">
+            <div class="spec-column">
+              <h4 class="spec-title">Highlights</h4>
+              <ul class="spec-list">
+                <li>Implemented secure authentication and RBAC using Supabase Authentication.</li>
+                <li>Developed dedicated dashboards for users and administrators with protected routing.</li>
+                <li>Created an admin panel for managing users, agents, properties, leads, and platform activity.</li>
+                <li>Designed a responsive single-page application with reusable React components and modern routing.
+                </li>
+              </ul>
+            </div>
+            <div class="spec-column">
+              <h4 class="spec-title">Tech Stack</h4>
+              <p class="spec-text">React • TypeScript • Vite • Tailwind CSS • React Router • Supabase • PostgreSQL •
+                Context API</p>
+
+              <h4 class="spec-title" style="margin-top: 30px;">Challenges & Learnings</h4>
+              <ul class="spec-list">
+                <li>Designed and implemented strict role-based access control to separate user and admin experiences.
+                </li>
+                <li>Built scalable dashboard layouts and reusable UI components to improve maintainability.</li>
+                <li>Learned to structure a production-ready React application using modern routing and Context API.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <div class="bento-item col-span-4" style="text-align: center; background: linear-gradient(45deg, #18181b, #27272a); border: 1px solid rgba(255,255,255,0.1);">
-        <div>
-          <h2 class="card-title">Imagine Cup 2026</h2>
-          <p class="card-desc">Pushing the boundaries of innovation and prototyping for global competition.</p>
+      <div class="separator-line"></div>
+
+      <article id="proj-3" class="detail-block">
+        <div class="detail-header">
+          <span class="detail-number">03.</span>
+          <h2 class="detail-title">Vyom Health <span class="highlight-italic">Healthcare Portal</span></h2>
         </div>
-      </div>
-    </main>
 
+        <div class="detail-content">
+          <p>Vyom Health is a digital health record management platform developed for the Smart India Hackathon (SIH) to
+            improve healthcare accessibility for migrant workers in Kerala. The platform provides each worker with a
+            unique digital health ID linked to a QR code, enabling secure, portable access to medical records and
+            ensuring continuity of care across healthcare providers.</p>
+          <p>Beyond digital record management, the proposed solution includes AI-powered disease assistance, government
+            health analytics dashboards, interactive disease heat maps, and predictive outbreak alerts to support
+            data-driven public health decisions. The platform is designed to align with India's digital health
+            initiatives through integration with the ABHA ecosystem.</p>
+
+          <div class="detail-featured-media">
+            <video controls autoplay muted loop playsinline poster="assets/vyom-preview.jpg">
+              <source src="assets/vyom-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- <div class="detail-gallery">
+            <img src="assets/vyom-shot1.png" alt="Vyom Portal 1" class="gallery-img">
+            <img src="assets/vyom-shot2.png" alt="Vyom Portal 2" class="gallery-img">
+          </div> -->
+
+          <div class="detail-specs">
+            <div class="spec-column">
+              <h4 class="spec-title">Highlights</h4>
+              <ul class="spec-list">
+                <li>Designed a QR code-based digital health ID for secure and portable medical records.</li>
+                <li>Planned AI-powered symptom analysis for preliminary disease suggestions.</li>
+                <li>Designed government dashboards with real-time health insights and analytics.</li>
+                <li>Conceptualized predictive outbreak alerts and interactive disease heat maps.</li>
+              </ul>
+            </div>
+            <div class="spec-column">
+              <h4 class="spec-title">Tech Focus</h4>
+              <p class="spec-text">HealthTech • Digital Health Records • QR Code System • AI-Assisted Healthcare • Data
+                Analytics • Public Health Intelligence • ABHA (NDHM)</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="script.js"></script>
 </body>
+
 </html>
